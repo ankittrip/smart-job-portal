@@ -1,8 +1,10 @@
+
+// src/services/api.js
 import axios from "axios";
 
 // 🔐 Set base URL depending on environment
 const API = axios.create({
-  baseURL: process.env.REACT_APP_API_URL, // ✅ Use environment variable
+  baseURL: "http://localhost:5000/api", // ✅ Change this if deployed
   withCredentials: false,
 });
 
@@ -30,7 +32,7 @@ export const getJobById = (id) => API.get(`/jobs/${id}`);
 export const applyToJob = (jobId, data) => API.post(`/jobs/${jobId}/apply`, data);
 export const withdrawApplication = (jobId) => API.delete(`/jobs/${jobId}/apply`);
 export const updateApplication = (jobId, data) => API.put(`/jobs/${jobId}/apply`, data);
-export const deleteJob = (jobId) => API.delete(`/jobs/${jobId}`);
+export const deleteJob = (jobId) => API.delete(`/jobs/${jobId}`); // ✅ Added deleteJob
 
 // 👤 Recruiter-specific
 export const getJobsByRecruiter = () => API.get("/jobs/recruiter");
