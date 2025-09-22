@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "license": "ISC",
-  "author": "anshul yadev",
+  "author": "Ankit Tripathi",
   "type": "module",
   "main": "server.js",
   "scripts": {
