@@ -4,7 +4,7 @@ import axios from "axios";
 
 // 🔐 Set base URL depending on environment
 const API = axios.create({
-  baseURL: "http://localhost:5000/api", // ✅ Change this if deployed
+  baseURL: ""https: "smart-job-portal-lj3e.onrender.com/api",
   withCredentials: false,
 });
 
